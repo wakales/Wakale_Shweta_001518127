@@ -4,6 +4,7 @@
  * and open the template in the editor.
  */
 package ui;
+import java.util.Date;
 import javax.swing.JOptionPane;
 import model.Car;
 import model.CarHistory;
@@ -38,11 +39,9 @@ public class CreateJPanel extends javax.swing.JPanel {
         lblSeats = new javax.swing.JLabel();
         lblSerial = new javax.swing.JLabel();
         lblModel = new javax.swing.JLabel();
-        lblUber = new javax.swing.JLabel();
         lblCity = new javax.swing.JLabel();
         lblFleet = new javax.swing.JLabel();
         lblCerti = new javax.swing.JLabel();
-        txtAvailCar = new javax.swing.JTextField();
         txtManuf = new javax.swing.JTextField();
         txtYearManuf = new javax.swing.JTextField();
         txtSeats = new javax.swing.JTextField();
@@ -51,10 +50,8 @@ public class CreateJPanel extends javax.swing.JPanel {
         txtFleet = new javax.swing.JTextField();
         txtCity = new javax.swing.JTextField();
         btnSave = new javax.swing.JButton();
-        YES = new javax.swing.JRadioButton();
-        NO = new javax.swing.JRadioButton();
-        EXPIRED = new javax.swing.JRadioButton();
-        NOTEXPIRED = new javax.swing.JRadioButton();
+        txtExpired = new com.toedter.calendar.JDateChooser();
+        txtAvailCar = new javax.swing.JSpinner();
 
         lblTitle.setFont(new java.awt.Font("Lucida Grande", 1, 14)); // NOI18N
         lblTitle.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -72,8 +69,6 @@ public class CreateJPanel extends javax.swing.JPanel {
 
         lblModel.setText("Model Number");
 
-        lblUber.setText("Car used by Uber ?");
-
         lblCity.setText("Availability Cars in Cities");
 
         lblFleet.setText("Last Updated Fleet Catalog");
@@ -87,33 +82,7 @@ public class CreateJPanel extends javax.swing.JPanel {
             }
         });
 
-        YES.setText("YES");
-        YES.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                YESActionPerformed(evt);
-            }
-        });
-
-        NO.setText("NO");
-        NO.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                NOActionPerformed(evt);
-            }
-        });
-
-        EXPIRED.setText("YES");
-        EXPIRED.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                EXPIREDActionPerformed(evt);
-            }
-        });
-
-        NOTEXPIRED.setText("NO");
-        NOTEXPIRED.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                NOTEXPIREDActionPerformed(evt);
-            }
-        });
+        txtAvailCar.setModel(new javax.swing.SpinnerListModel(new String[] {"Available", "Booked"}));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
@@ -132,45 +101,36 @@ public class CreateJPanel extends javax.swing.JPanel {
                                     .addComponent(lblSeats, javax.swing.GroupLayout.PREFERRED_SIZE, 181, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addComponent(lblSerial, javax.swing.GroupLayout.PREFERRED_SIZE, 181, javax.swing.GroupLayout.PREFERRED_SIZE))
                                 .addGap(64, 64, 64)
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                    .addComponent(txtAvailCar, javax.swing.GroupLayout.PREFERRED_SIZE, 168, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                                        .addComponent(txtManuf, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 168, Short.MAX_VALUE)
-                                        .addComponent(txtYearManuf, javax.swing.GroupLayout.Alignment.LEADING)
-                                        .addComponent(txtSeats, javax.swing.GroupLayout.Alignment.LEADING)
-                                        .addComponent(txtSerial, javax.swing.GroupLayout.Alignment.LEADING))))
-                            .addComponent(lblCerti)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                        .addComponent(txtYearManuf)
+                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                                            .addComponent(txtAvailCar)
+                                            .addComponent(txtManuf, javax.swing.GroupLayout.DEFAULT_SIZE, 168, Short.MAX_VALUE))
+                                        .addComponent(txtSeats))
+                                    .addComponent(txtSerial)))
                             .addGroup(layout.createSequentialGroup()
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addComponent(lblModel, javax.swing.GroupLayout.PREFERRED_SIZE, 181, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(lblUber)
                                     .addComponent(lblFleet, javax.swing.GroupLayout.PREFERRED_SIZE, 189, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(lblCity, javax.swing.GroupLayout.PREFERRED_SIZE, 189, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addGap(56, 56, 56)
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(lblCity, javax.swing.GroupLayout.PREFERRED_SIZE, 189, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(lblCerti))
+                                .addGap(37, 37, 37)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                                     .addGroup(layout.createSequentialGroup()
                                         .addGap(29, 29, 29)
                                         .addComponent(btnSave, javax.swing.GroupLayout.PREFERRED_SIZE, 103, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                        .addComponent(txtFleet)
-                                        .addComponent(txtCity)
-                                        .addGroup(layout.createSequentialGroup()
-                                            .addComponent(EXPIRED)
-                                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                            .addComponent(NOTEXPIRED)
-                                            .addGap(25, 25, 25))
-                                        .addGroup(layout.createSequentialGroup()
-                                            .addComponent(YES)
-                                            .addGap(29, 29, 29)
-                                            .addComponent(NO))
-                                        .addComponent(txtModel))))))
+                                    .addComponent(txtFleet)
+                                    .addComponent(txtCity)
+                                    .addComponent(txtModel)
+                                    .addComponent(txtExpired, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))))
                     .addGroup(layout.createSequentialGroup()
                         .addContainerGap()
                         .addComponent(lblTitle, javax.swing.GroupLayout.PREFERRED_SIZE, 723, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
-        layout.linkSize(javax.swing.SwingConstants.HORIZONTAL, new java.awt.Component[] {txtAvailCar, txtCity, txtFleet, txtManuf, txtModel, txtSeats, txtSerial, txtYearManuf});
+        layout.linkSize(javax.swing.SwingConstants.HORIZONTAL, new java.awt.Component[] {txtCity, txtFleet, txtManuf, txtModel, txtSeats, txtSerial, txtYearManuf});
 
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -201,25 +161,19 @@ public class CreateJPanel extends javax.swing.JPanel {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(lblModel, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(txtModel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(lblUber, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(YES)
-                    .addComponent(NO))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(lblCity, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(txtCity, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(lblFleet, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(txtFleet, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(27, 27, 27)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(EXPIRED)
-                    .addComponent(NOTEXPIRED)
-                    .addComponent(lblCerti))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGap(30, 30, 30)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(lblCerti)
+                    .addComponent(txtExpired, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(19, 19, 19)
                 .addComponent(btnSave)
                 .addGap(12, 12, 12))
         );
@@ -229,7 +183,7 @@ public class CreateJPanel extends javax.swing.JPanel {
         // TODO add your handling code here:
         
         
-        String Avail= (txtAvailCar.getText());
+        String Avail= (txtAvailCar.getValue().toString());
         String Manuf= txtManuf.getText();
         long YearofM= Long.parseLong(txtYearManuf.getText());
         String Seatnum= (txtSeats.getText());
@@ -239,6 +193,8 @@ public class CreateJPanel extends javax.swing.JPanel {
         int Fleet=Integer.parseInt(txtFleet.getText());
         String City= txtCity.getText();
         //certi
+        Date Certi= txtExpired.getDate();
+        
         
         Car car = history.addNewCars();  
         
@@ -251,13 +207,14 @@ public class CreateJPanel extends javax.swing.JPanel {
         car.setModelnum(Modelnum);
         car.setFleet(Fleet);
         car.setCity(City);
+        car.setCerti(Certi);
         //car.setUber(true);
         
         
         JOptionPane.showMessageDialog(this,"New Car Details Added" );
         
         //txtFirst.setText("");
-        txtAvailCar.setText("");
+        //txtAvailCar.setText("");
         txtManuf.setText("");
         txtYearManuf.setText("");
         txtSeats.setText("");
@@ -265,67 +222,13 @@ public class CreateJPanel extends javax.swing.JPanel {
         txtModel.setText("");
         txtFleet.setText("");
         txtCity.setText("");
-        
+        txtExpired.setDate(null);
                  
         
     }//GEN-LAST:event_btnSaveActionPerformed
 
-    private void YESActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_YESActionPerformed
-        // TODO add your handling code here:
-        
-        if(YES.isSelected())
-        {
-        NO.setSelected(false);
-        boolean emc = true;
-//        System.out.println(Expired.isSelected());
-        }
-
-        
-        
-    }//GEN-LAST:event_YESActionPerformed
-
-    private void EXPIREDActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_EXPIREDActionPerformed
-        // TODO add your handling code here:
-        
-        if(EXPIRED.isSelected())
-        { 
-            NOTEXPIRED.setSelected(false);
-            boolean emc = true;
-//        System.out.println(Expired.isSelected());
-        }
-
-        
-    }//GEN-LAST:event_EXPIREDActionPerformed
-
-    private void NOTEXPIREDActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_NOTEXPIREDActionPerformed
-        // TODO add your handling code here:
-        
-        if(NOTEXPIRED.isSelected())
-        {
-        EXPIRED.setSelected(false);
-        boolean emc = false;
-//        System.out.println(NotExpired.isSelected());
-        }
-    }//GEN-LAST:event_NOTEXPIREDActionPerformed
-
-    private void NOActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_NOActionPerformed
-        // TODO add your handling code here:
-        
-        if(NO.isSelected())
-        {
-        YES.setSelected(false);
-        boolean emc = false;
-//        System.out.println(NotExpired.isSelected());
-        }
-
-    }//GEN-LAST:event_NOActionPerformed
-
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JRadioButton EXPIRED;
-    private javax.swing.JRadioButton NO;
-    private javax.swing.JRadioButton NOTEXPIRED;
-    private javax.swing.JRadioButton YES;
     private javax.swing.JButton btnSave;
     private javax.swing.JLabel lblAvailCar;
     private javax.swing.JLabel lblCerti;
@@ -336,10 +239,10 @@ public class CreateJPanel extends javax.swing.JPanel {
     private javax.swing.JLabel lblSeats;
     private javax.swing.JLabel lblSerial;
     private javax.swing.JLabel lblTitle;
-    private javax.swing.JLabel lblUber;
     private javax.swing.JLabel lblYearManuf;
-    private javax.swing.JTextField txtAvailCar;
+    private javax.swing.JSpinner txtAvailCar;
     private javax.swing.JTextField txtCity;
+    private com.toedter.calendar.JDateChooser txtExpired;
     private javax.swing.JTextField txtFleet;
     private javax.swing.JTextField txtManuf;
     private javax.swing.JTextField txtModel;

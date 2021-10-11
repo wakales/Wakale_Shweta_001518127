@@ -50,7 +50,7 @@
                       </Group>
                   </Group>
               </Group>
-              <EmptySpace pref="24" max="32767" attributes="0"/>
+              <EmptySpace pref="177" max="32767" attributes="0"/>
               <Group type="103" groupAlignment="0" attributes="0">
                   <Component id="lblSSerial" alignment="0" min="-2" max="-2" attributes="0"/>
                   <Component id="lblSModel" alignment="0" min="-2" max="-2" attributes="0"/>
@@ -63,7 +63,11 @@
                       <EmptySpace max="-2" attributes="0"/>
                       <Component id="btnSSeat" linkSize="1" min="-2" max="-2" attributes="0"/>
                   </Group>
-                  <Component id="txtSSerial" min="-2" pref="169" max="-2" attributes="0"/>
+                  <Group type="102" attributes="0">
+                      <Component id="txtSSerial" min="-2" pref="169" max="-2" attributes="0"/>
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Component id="btnSSerial" linkSize="1" min="-2" max="-2" attributes="0"/>
+                  </Group>
                   <Group type="102" alignment="0" attributes="0">
                       <Component id="txtSModel" min="-2" pref="169" max="-2" attributes="0"/>
                       <EmptySpace max="-2" attributes="0"/>
@@ -74,17 +78,16 @@
           </Group>
           <Group type="102" alignment="0" attributes="0">
               <EmptySpace min="-2" pref="227" max="-2" attributes="0"/>
-              <Component id="btnFirst" min="-2" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Group type="102" attributes="0">
+                      <EmptySpace min="6" pref="6" max="-2" attributes="0"/>
+                      <Component id="btnCerti" min="-2" pref="218" max="-2" attributes="0"/>
+                  </Group>
+                  <Component id="btnFirst" min="-2" max="-2" attributes="0"/>
+              </Group>
               <EmptySpace max="32767" attributes="0"/>
           </Group>
           <Group type="103" rootIndex="1" groupAlignment="0" attributes="0">
-              <Group type="102" alignment="1" attributes="0">
-                  <EmptySpace pref="699" max="32767" attributes="0"/>
-                  <Component id="btnSSerial1" linkSize="1" min="-2" max="-2" attributes="0"/>
-                  <EmptySpace min="-2" pref="16" max="-2" attributes="0"/>
-              </Group>
-          </Group>
-          <Group type="103" rootIndex="2" groupAlignment="0" attributes="0">
               <Group type="102" attributes="0">
                   <EmptySpace max="-2" attributes="0"/>
                   <Component id="jScrollPane1" max="32767" attributes="0"/>
@@ -105,6 +108,7 @@
                   <Component id="txtSYear" alignment="3" min="-2" max="-2" attributes="0"/>
                   <Component id="txtSSerial" alignment="3" min="-2" max="-2" attributes="0"/>
                   <Component id="btnSYear" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="btnSSerial" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace min="-2" pref="18" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
@@ -126,16 +130,11 @@
               </Group>
               <EmptySpace min="-2" pref="31" max="-2" attributes="0"/>
               <Component id="btnFirst" min="-2" max="-2" attributes="0"/>
-              <EmptySpace pref="532" max="32767" attributes="0"/>
+              <EmptySpace max="-2" attributes="0"/>
+              <Component id="btnCerti" min="-2" max="-2" attributes="0"/>
+              <EmptySpace pref="497" max="32767" attributes="0"/>
           </Group>
           <Group type="103" rootIndex="1" groupAlignment="0" attributes="0">
-              <Group type="102" alignment="0" attributes="0">
-                  <EmptySpace min="-2" pref="121" max="-2" attributes="0"/>
-                  <Component id="btnSSerial1" min="-2" max="-2" attributes="0"/>
-                  <EmptySpace pref="650" max="32767" attributes="0"/>
-              </Group>
-          </Group>
-          <Group type="103" rootIndex="2" groupAlignment="0" attributes="0">
               <Group type="102" alignment="0" attributes="0">
                   <EmptySpace min="-2" pref="313" max="-2" attributes="0"/>
                   <Component id="jScrollPane1" min="-2" pref="173" max="-2" attributes="0"/>
@@ -238,12 +237,12 @@
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnSModelActionPerformed"/>
       </Events>
     </Component>
-    <Component class="javax.swing.JButton" name="btnSSerial1">
+    <Component class="javax.swing.JButton" name="btnSSerial">
       <Properties>
         <Property name="text" type="java.lang.String" value="Search"/>
       </Properties>
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnSSerial1ActionPerformed"/>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnSSerialActionPerformed"/>
       </Events>
     </Component>
     <Component class="javax.swing.JButton" name="btnSSeat">
@@ -292,5 +291,13 @@
         </Component>
       </SubComponents>
     </Container>
+    <Component class="javax.swing.JButton" name="btnCerti">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Expired Maintanance Certificate"/>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnCertiActionPerformed"/>
+      </Events>
+    </Component>
   </SubComponents>
 </Form>

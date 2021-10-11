@@ -57,9 +57,7 @@ public class ViewJPanel extends javax.swing.JPanel {
         txtManuf = new javax.swing.JTextField();
         btnYes = new javax.swing.JRadioButton();
         btnNo = new javax.swing.JRadioButton();
-        btnYesCer = new javax.swing.JRadioButton();
         lblAvailCar = new javax.swing.JLabel();
-        btnNoCer = new javax.swing.JRadioButton();
         lblManuf = new javax.swing.JLabel();
         lblYearManuf = new javax.swing.JLabel();
         lblSeats = new javax.swing.JLabel();
@@ -70,6 +68,7 @@ public class ViewJPanel extends javax.swing.JPanel {
         lblFleet = new javax.swing.JLabel();
         lblCerti = new javax.swing.JLabel();
         btnUpdate = new javax.swing.JButton();
+        txtExpired = new javax.swing.JTextField();
 
         lblTitle.setFont(new java.awt.Font("Lucida Grande", 1, 14)); // NOI18N
         lblTitle.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -77,17 +76,17 @@ public class ViewJPanel extends javax.swing.JPanel {
 
         tblCars.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {null, null, null, null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null, null, null, null}
+                {null, null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null, null}
             },
             new String [] {
-                "Manufacturer", "Available", "Year of Manuf", "Seat No", "Serial No", "Model No", "Avail in City", "Certificate", "Used by Uber", "Fleet Catalog"
+                "Manufacturer", "Available", "Year of Manuf", "Seat No", "Serial No", "Model No", "Avail in City", "Certificate"
             }
         ) {
             boolean[] canEdit = new boolean [] {
-                false, false, false, false, false, false, false, false, true, true
+                false, false, false, false, false, false, false, false
             };
 
             public boolean isCellEditable(int rowIndex, int columnIndex) {
@@ -128,11 +127,7 @@ public class ViewJPanel extends javax.swing.JPanel {
 
         btnNo.setText("NO");
 
-        btnYesCer.setText("YES");
-
         lblAvailCar.setText("Currently Available Cars");
-
-        btnNoCer.setText("NO");
 
         lblManuf.setText("Manufacturer");
 
@@ -184,35 +179,31 @@ public class ViewJPanel extends javax.swing.JPanel {
                                 .addComponent(txtSerial, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 168, javax.swing.GroupLayout.PREFERRED_SIZE))))
                     .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                                .addGap(0, 0, Short.MAX_VALUE)
+                                .addComponent(btnUpdate)
+                                .addGap(37, 37, 37))
                             .addGroup(layout.createSequentialGroup()
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addComponent(lblModel, javax.swing.GroupLayout.PREFERRED_SIZE, 181, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addComponent(lblUber)
                                     .addComponent(lblFleet, javax.swing.GroupLayout.PREFERRED_SIZE, 189, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(lblCity, javax.swing.GroupLayout.PREFERRED_SIZE, 189, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addGap(56, 56, 56)
+                                    .addComponent(lblCity, javax.swing.GroupLayout.PREFERRED_SIZE, 189, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(lblCerti))
+                                .addGap(37, 37, 37)
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                    .addComponent(txtFleet)
+                                    .addComponent(txtFleet, javax.swing.GroupLayout.DEFAULT_SIZE, 168, Short.MAX_VALUE)
                                     .addComponent(txtCity)
-                                    .addGroup(layout.createSequentialGroup()
-                                        .addComponent(btnYesCer)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 37, Short.MAX_VALUE)
-                                        .addComponent(btnNoCer)
-                                        .addGap(25, 25, 25))
                                     .addGroup(layout.createSequentialGroup()
                                         .addComponent(btnYes)
                                         .addGap(29, 29, 29)
                                         .addComponent(btnNo))
-                                    .addComponent(txtModel))
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 73, Short.MAX_VALUE))
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                                .addGap(0, 0, Short.MAX_VALUE)
-                                .addComponent(btnUpdate)
-                                .addGap(37, 37, 37)))
+                                    .addComponent(txtModel)
+                                    .addComponent(txtExpired))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 73, Short.MAX_VALUE)))
                         .addComponent(btnView)
                         .addGap(48, 48, 48)
-                        .addComponent(btnDelete))
-                    .addComponent(lblCerti))
+                        .addComponent(btnDelete)))
                 .addGap(55, 55, 55))
             .addComponent(jScrollPane1)
             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -273,12 +264,11 @@ public class ViewJPanel extends javax.swing.JPanel {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(lblFleet, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(txtFleet, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(27, 27, 27)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(btnYesCer)
-                    .addComponent(btnNoCer)
-                    .addComponent(lblCerti))
-                .addContainerGap(184, Short.MAX_VALUE))
+                .addGap(22, 22, 22)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(lblCerti)
+                    .addComponent(txtExpired, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(186, Short.MAX_VALUE))
             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(layout.createSequentialGroup()
                     .addGap(149, 149, 149)
@@ -331,7 +321,7 @@ public class ViewJPanel extends javax.swing.JPanel {
                 txtModel.setText(selectedCar.getModelnum());
                 txtCity.setText(selectedCar.getCity());
                 txtFleet.setText(String.valueOf(selectedCar.getFleet()));
-                
+                txtExpired.setText(String.valueOf(selectedCar.getCerti()));
                 
                 
     }//GEN-LAST:event_btnViewActionPerformed
@@ -374,11 +364,9 @@ public class ViewJPanel extends javax.swing.JPanel {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnDelete;
     private javax.swing.JRadioButton btnNo;
-    private javax.swing.JRadioButton btnNoCer;
     private javax.swing.JButton btnUpdate;
     private javax.swing.JButton btnView;
     private javax.swing.JRadioButton btnYes;
-    private javax.swing.JRadioButton btnYesCer;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JLabel lblAvailCar;
     private javax.swing.JLabel lblCerti;
@@ -395,6 +383,7 @@ public class ViewJPanel extends javax.swing.JPanel {
     private javax.swing.JTable tblCars;
     private javax.swing.JTextField txtAvailCar;
     private javax.swing.JTextField txtCity;
+    private javax.swing.JTextField txtExpired;
     private javax.swing.JTextField txtFleet;
     private javax.swing.JTextField txtManuf;
     private javax.swing.JTextField txtModel;
@@ -411,7 +400,7 @@ public class ViewJPanel extends javax.swing.JPanel {
         
         for(Car c: history.getHistory()){
            
-            Object[] row= new Object[10];
+            Object[] row= new Object[8];
             
             //row[0]=c;
             row[0]=c;
@@ -421,18 +410,19 @@ public class ViewJPanel extends javax.swing.JPanel {
             row[4]=c.getSerialnum();
             row[5]=c.getModelnum();
             row[6]=c.getCity();
-            row[9]=c.getFleet();
-            if(c.isCerti() == false) {
-                row[7] = "Expired";
-            } else {
-                row[7] = "Active";
-            }
-            if(c.isUber() == false){
-                row[8] = "NO";
-            }
-            else {
-                row[8] = "YES";
-            }
+            //row[9]=c.getFleet();
+            row[7]=c.getCerti();
+            //if(c.isCerti() == false) {
+               // row[7] = "Expired";
+            //} else {
+                //row[7] = "Active";
+            //}
+            //if(c.isUber() == false){
+               // row[8] = "NO";
+            //}
+            //else {
+             //   row[8] = "YES";
+            //}
             
             
             model.addRow(row);

@@ -5,6 +5,7 @@
  */
 package ui;
 
+import java.util.Date;
 import model.Car;
 import model.CarHistory;
 import javax.swing.table.DefaultTableModel;
@@ -52,11 +53,12 @@ public class SearchJPanel extends javax.swing.JPanel {
         btnSManuf = new javax.swing.JButton();
         btnSCity = new javax.swing.JButton();
         btnSModel = new javax.swing.JButton();
-        btnSSerial1 = new javax.swing.JButton();
+        btnSSerial = new javax.swing.JButton();
         btnSSeat = new javax.swing.JButton();
         btnFirst = new javax.swing.JButton();
         jScrollPane1 = new javax.swing.JScrollPane();
         tblCars = new javax.swing.JTable();
+        btnCerti = new javax.swing.JButton();
 
         lblSYear.setText("Year");
 
@@ -120,10 +122,10 @@ public class SearchJPanel extends javax.swing.JPanel {
             }
         });
 
-        btnSSerial1.setText("Search");
-        btnSSerial1.addActionListener(new java.awt.event.ActionListener() {
+        btnSSerial.setText("Search");
+        btnSSerial.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnSSerial1ActionPerformed(evt);
+                btnSSerialActionPerformed(evt);
             }
         });
 
@@ -162,6 +164,13 @@ public class SearchJPanel extends javax.swing.JPanel {
         });
         jScrollPane1.setViewportView(tblCars);
 
+        btnCerti.setText("Expired Maintanance Certificate");
+        btnCerti.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnCertiActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
         layout.setHorizontalGroup(
@@ -192,7 +201,7 @@ public class SearchJPanel extends javax.swing.JPanel {
                                 .addComponent(txtSManuf, javax.swing.GroupLayout.PREFERRED_SIZE, 169, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addComponent(btnSManuf)))))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 24, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 177, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(lblSSerial)
                     .addComponent(lblSModel)
@@ -203,7 +212,10 @@ public class SearchJPanel extends javax.swing.JPanel {
                         .addComponent(txtSSeat, javax.swing.GroupLayout.PREFERRED_SIZE, 169, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(btnSSeat))
-                    .addComponent(txtSSerial, javax.swing.GroupLayout.PREFERRED_SIZE, 169, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(txtSSerial, javax.swing.GroupLayout.PREFERRED_SIZE, 169, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(btnSSerial))
                     .addGroup(layout.createSequentialGroup()
                         .addComponent(txtSModel, javax.swing.GroupLayout.PREFERRED_SIZE, 169, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -211,13 +223,12 @@ public class SearchJPanel extends javax.swing.JPanel {
                 .addGap(14, 14, 14))
             .addGroup(layout.createSequentialGroup()
                 .addGap(227, 227, 227)
-                .addComponent(btnFirst)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(6, 6, 6)
+                        .addComponent(btnCerti, javax.swing.GroupLayout.PREFERRED_SIZE, 218, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(btnFirst))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                    .addContainerGap(699, Short.MAX_VALUE)
-                    .addComponent(btnSSerial1)
-                    .addGap(16, 16, 16)))
             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(layout.createSequentialGroup()
                     .addContainerGap()
@@ -225,7 +236,7 @@ public class SearchJPanel extends javax.swing.JPanel {
                     .addContainerGap()))
         );
 
-        layout.linkSize(javax.swing.SwingConstants.HORIZONTAL, new java.awt.Component[] {btnSModel, btnSSeat, btnSSerial1});
+        layout.linkSize(javax.swing.SwingConstants.HORIZONTAL, new java.awt.Component[] {btnSModel, btnSSeat, btnSSerial});
 
         layout.linkSize(javax.swing.SwingConstants.HORIZONTAL, new java.awt.Component[] {btnSCity, btnSManuf, btnSYear});
 
@@ -240,7 +251,8 @@ public class SearchJPanel extends javax.swing.JPanel {
                     .addComponent(lblSSerial)
                     .addComponent(txtSYear, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(txtSSerial, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(btnSYear))
+                    .addComponent(btnSYear)
+                    .addComponent(btnSSerial))
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(lblSManuf)
@@ -259,12 +271,9 @@ public class SearchJPanel extends javax.swing.JPanel {
                     .addComponent(btnSSeat))
                 .addGap(31, 31, 31)
                 .addComponent(btnFirst)
-                .addContainerGap(532, Short.MAX_VALUE))
-            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(layout.createSequentialGroup()
-                    .addGap(121, 121, 121)
-                    .addComponent(btnSSerial1)
-                    .addContainerGap(650, Short.MAX_VALUE)))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(btnCerti)
+                .addContainerGap(497, Short.MAX_VALUE))
             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(layout.createSequentialGroup()
                     .addGap(313, 313, 313)
@@ -291,7 +300,7 @@ public class SearchJPanel extends javax.swing.JPanel {
             row[4]=c.getSerialnum();
             row[5]=c.getModelnum();
             row[6]=c.getCity();
-            row[7]=c.getFleet();
+            row[7]=c.getCerti();
             
             
             model.addRow(row);
@@ -303,7 +312,7 @@ public class SearchJPanel extends javax.swing.JPanel {
         }
     }//GEN-LAST:event_btnFirstActionPerformed
 
-    private void btnSSerial1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSSerial1ActionPerformed
+    private void btnSSerialActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSSerialActionPerformed
         // TODO add your handling code here:
         String matchSerialNum= txtSSerial.getText();
         
@@ -325,14 +334,14 @@ public class SearchJPanel extends javax.swing.JPanel {
             row[4]=c.getSerialnum();
             row[5]=c.getModelnum();
             row[6]=c.getCity();
-            row[7]=c.getFleet();
+            row[7]=c.getCerti();
             
             
             model.addRow(row);
            }
         }      
               
-    }//GEN-LAST:event_btnSSerial1ActionPerformed
+    }//GEN-LAST:event_btnSSerialActionPerformed
 
     private void txtSYearActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtSYearActionPerformed
         // TODO add your handling code here:
@@ -361,7 +370,7 @@ public class SearchJPanel extends javax.swing.JPanel {
             row[4]=c.getSerialnum();
             row[5]=c.getModelnum();
             row[6]=c.getCity();
-            row[7]=c.getFleet();
+            row[7]=c.getCerti();
             
             
             model.addRow(row);
@@ -392,7 +401,7 @@ public class SearchJPanel extends javax.swing.JPanel {
             row[4]=c.getSerialnum();
             row[5]=c.getModelnum();
             row[6]=c.getCity();
-            row[7]=c.getFleet();
+            row[7]=c.getCerti();
             
             
             model.addRow(row);
@@ -423,7 +432,7 @@ public class SearchJPanel extends javax.swing.JPanel {
             row[4]=c.getSerialnum();
             row[5]=c.getModelnum();
             row[6]=c.getCity();
-            row[7]=c.getFleet();
+            row[7]=c.getCerti();
             
             
             model.addRow(row);
@@ -453,7 +462,7 @@ public class SearchJPanel extends javax.swing.JPanel {
             row[4]=c.getSerialnum();
             row[5]=c.getModelnum();
             row[6]=c.getCity();
-            row[7]=c.getFleet();
+            row[7]=c.getCerti();
             
             
             model.addRow(row);
@@ -494,7 +503,7 @@ public class SearchJPanel extends javax.swing.JPanel {
             row[4]=c.getSerialnum();
             row[5]=c.getModelnum();
             row[6]=c.getCity();
-            row[7]=c.getFleet();
+            row[7]=c.getCerti();
             
             
             model.addRow(row);
@@ -502,14 +511,47 @@ public class SearchJPanel extends javax.swing.JPanel {
         } 
     }//GEN-LAST:event_btnSSeatActionPerformed
 
+    private void btnCertiActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCertiActionPerformed
+        // TODO add your handling code here:
+        Date todayDate = java.util.Calendar.getInstance().getTime();
+        
+         DefaultTableModel model = (DefaultTableModel) tblCars.getModel();
+        model.setRowCount(0);
+        
+        for(Car c: history.getHistory()){
+            //System.out.println("Check.... ");
+            
+            Date exp=c.getCerti();
+           if(exp.before(todayDate)){
+//              System.out.println("Check.... ");
+               Object[] row= new Object[8];
+            
+            //row[0]=c;
+            row[0]=c;
+            row[1]=c.getAvail();
+            row[2]=c.getYearofM();
+//            txtSYear.setText(Long.toString(c.getYearofM()));
+            row[3]=c.getSeatnum();
+            row[4]=c.getSerialnum();
+            row[5]=c.getModelnum();
+            row[6]=c.getCity();
+            row[7]=c.getCerti();
+            
+            
+            model.addRow(row);
+           }
+        } 
+    }//GEN-LAST:event_btnCertiActionPerformed
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton btnCerti;
     private javax.swing.JButton btnFirst;
     private javax.swing.JButton btnSCity;
     private javax.swing.JButton btnSManuf;
     private javax.swing.JButton btnSModel;
     private javax.swing.JButton btnSSeat;
-    private javax.swing.JButton btnSSerial1;
+    private javax.swing.JButton btnSSerial;
     private javax.swing.JButton btnSYear;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JLabel lblSCity;

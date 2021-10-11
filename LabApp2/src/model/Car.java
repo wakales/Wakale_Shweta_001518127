@@ -5,6 +5,8 @@
  */
 package model;
 
+import java.util.Date;
+
 /**
  *
  * @author shwetawakale
@@ -20,7 +22,7 @@ public class Car {
     private boolean Uber;
     private int Fleet;
     private String City;
-    private boolean Certi;
+    private Date Certi;
 
     public String getAvail() {
         return Avail;
@@ -94,11 +96,11 @@ public class Car {
         this.City = City;
     }
 
-    public boolean isCerti() {
+    public Date getCerti() {
         return Certi;
     }
 
-    public void setCerti(boolean Certi) {
+    public void setCerti(Date Certi) {
         this.Certi = Certi;
     }
     

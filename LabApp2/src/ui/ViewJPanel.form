@@ -41,43 +41,38 @@
                   </Group>
                   <Group type="102" alignment="0" attributes="0">
                       <Group type="103" groupAlignment="0" attributes="0">
-                          <Group type="102" attributes="0">
+                          <Group type="102" alignment="1" attributes="0">
+                              <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                              <Component id="btnUpdate" linkSize="1" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace min="-2" pref="37" max="-2" attributes="0"/>
+                          </Group>
+                          <Group type="102" alignment="0" attributes="0">
                               <Group type="103" groupAlignment="0" attributes="0">
                                   <Component id="lblModel" alignment="0" min="-2" pref="181" max="-2" attributes="0"/>
                                   <Component id="lblUber" alignment="0" min="-2" max="-2" attributes="0"/>
                                   <Component id="lblFleet" alignment="0" min="-2" pref="189" max="-2" attributes="0"/>
                                   <Component id="lblCity" alignment="0" min="-2" pref="189" max="-2" attributes="0"/>
+                                  <Component id="lblCerti" alignment="0" min="-2" max="-2" attributes="0"/>
                               </Group>
-                              <EmptySpace min="56" pref="56" max="-2" attributes="0"/>
+                              <EmptySpace min="-2" pref="37" max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                                  <Component id="txtFleet" alignment="0" max="32767" attributes="0"/>
+                                  <Component id="txtFleet" alignment="0" pref="168" max="32767" attributes="0"/>
                                   <Component id="txtCity" alignment="0" max="32767" attributes="0"/>
-                                  <Group type="102" alignment="0" attributes="0">
-                                      <Component id="btnYesCer" min="-2" max="-2" attributes="0"/>
-                                      <EmptySpace pref="37" max="32767" attributes="0"/>
-                                      <Component id="btnNoCer" min="-2" max="-2" attributes="0"/>
-                                      <EmptySpace min="-2" pref="25" max="-2" attributes="0"/>
-                                  </Group>
                                   <Group type="102" alignment="0" attributes="0">
                                       <Component id="btnYes" min="-2" max="-2" attributes="0"/>
                                       <EmptySpace min="-2" pref="29" max="-2" attributes="0"/>
                                       <Component id="btnNo" min="-2" max="-2" attributes="0"/>
                                   </Group>
                                   <Component id="txtModel" alignment="0" max="32767" attributes="0"/>
+                                  <Component id="txtExpired" max="32767" attributes="0"/>
                               </Group>
                               <EmptySpace pref="73" max="32767" attributes="0"/>
-                          </Group>
-                          <Group type="102" alignment="1" attributes="0">
-                              <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
-                              <Component id="btnUpdate" linkSize="1" min="-2" max="-2" attributes="0"/>
-                              <EmptySpace min="-2" pref="37" max="-2" attributes="0"/>
                           </Group>
                       </Group>
                       <Component id="btnView" linkSize="1" min="-2" max="-2" attributes="0"/>
                       <EmptySpace min="-2" pref="48" max="-2" attributes="0"/>
                       <Component id="btnDelete" linkSize="1" min="-2" max="-2" attributes="0"/>
                   </Group>
-                  <Component id="lblCerti" alignment="0" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace min="-2" pref="55" max="-2" attributes="0"/>
           </Group>
@@ -150,13 +145,12 @@
                   <Component id="lblFleet" alignment="3" min="-2" pref="36" max="-2" attributes="0"/>
                   <Component id="txtFleet" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
-              <EmptySpace min="-2" pref="27" max="-2" attributes="0"/>
-              <Group type="103" groupAlignment="0" attributes="0">
-                  <Component id="btnYesCer" alignment="0" min="-2" max="-2" attributes="0"/>
-                  <Component id="btnNoCer" alignment="0" min="-2" max="-2" attributes="0"/>
-                  <Component id="lblCerti" alignment="0" min="-2" max="-2" attributes="0"/>
+              <EmptySpace min="-2" pref="22" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="lblCerti" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="txtExpired" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
-              <EmptySpace pref="184" max="32767" attributes="0"/>
+              <EmptySpace pref="186" max="32767" attributes="0"/>
           </Group>
           <Group type="103" rootIndex="1" groupAlignment="0" attributes="0">
               <Group type="102" alignment="0" attributes="0">
@@ -188,7 +182,7 @@
         <Component class="javax.swing.JTable" name="tblCars">
           <Properties>
             <Property name="model" type="javax.swing.table.TableModel" editor="org.netbeans.modules.form.editors2.TableModelEditor">
-              <Table columnCount="10" rowCount="4">
+              <Table columnCount="8" rowCount="4">
                 <Column editable="false" title="Manufacturer" type="java.lang.Object"/>
                 <Column editable="false" title="Available" type="java.lang.Object"/>
                 <Column editable="false" title="Year of Manuf" type="java.lang.Object"/>
@@ -197,22 +191,10 @@
                 <Column editable="false" title="Model No" type="java.lang.Object"/>
                 <Column editable="false" title="Avail in City" type="java.lang.Object"/>
                 <Column editable="false" title="Certificate" type="java.lang.Object"/>
-                <Column editable="true" title="Used by Uber" type="java.lang.Object"/>
-                <Column editable="true" title="Fleet Catalog" type="java.lang.Object"/>
               </Table>
             </Property>
             <Property name="columnModel" type="javax.swing.table.TableColumnModel" editor="org.netbeans.modules.form.editors2.TableColumnModelEditor">
               <TableColumnModel selectionModel="0">
-                <Column maxWidth="-1" minWidth="-1" prefWidth="-1" resizable="true">
-                  <Title/>
-                  <Editor/>
-                  <Renderer/>
-                </Column>
-                <Column maxWidth="-1" minWidth="-1" prefWidth="-1" resizable="true">
-                  <Title/>
-                  <Editor/>
-                  <Renderer/>
-                </Column>
                 <Column maxWidth="-1" minWidth="-1" prefWidth="-1" resizable="true">
                   <Title/>
                   <Editor/>
@@ -315,19 +297,9 @@
         <Property name="text" type="java.lang.String" value="NO"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JRadioButton" name="btnYesCer">
-      <Properties>
-        <Property name="text" type="java.lang.String" value="YES"/>
-      </Properties>
-    </Component>
     <Component class="javax.swing.JLabel" name="lblAvailCar">
       <Properties>
         <Property name="text" type="java.lang.String" value="Currently Available Cars"/>
-      </Properties>
-    </Component>
-    <Component class="javax.swing.JRadioButton" name="btnNoCer">
-      <Properties>
-        <Property name="text" type="java.lang.String" value="NO"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JLabel" name="lblManuf">
@@ -382,6 +354,8 @@
       <Events>
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnUpdateActionPerformed"/>
       </Events>
+    </Component>
+    <Component class="javax.swing.JTextField" name="txtExpired">
     </Component>
   </SubComponents>
 </Form>
