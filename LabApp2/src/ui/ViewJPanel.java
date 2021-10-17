@@ -55,15 +55,12 @@ public class ViewJPanel extends javax.swing.JPanel {
         txtCity = new javax.swing.JTextField();
         txtAvailCar = new javax.swing.JTextField();
         txtManuf = new javax.swing.JTextField();
-        btnYes = new javax.swing.JRadioButton();
-        btnNo = new javax.swing.JRadioButton();
         lblAvailCar = new javax.swing.JLabel();
         lblManuf = new javax.swing.JLabel();
         lblYearManuf = new javax.swing.JLabel();
         lblSeats = new javax.swing.JLabel();
         lblSerial = new javax.swing.JLabel();
         lblModel = new javax.swing.JLabel();
-        lblUber = new javax.swing.JLabel();
         lblCity = new javax.swing.JLabel();
         lblFleet = new javax.swing.JLabel();
         lblCerti = new javax.swing.JLabel();
@@ -123,10 +120,6 @@ public class ViewJPanel extends javax.swing.JPanel {
             }
         });
 
-        btnYes.setText("YES");
-
-        btnNo.setText("NO");
-
         lblAvailCar.setText("Currently Available Cars");
 
         lblManuf.setText("Manufacturer");
@@ -138,8 +131,6 @@ public class ViewJPanel extends javax.swing.JPanel {
         lblSerial.setText("Serial Number");
 
         lblModel.setText("Model Number");
-
-        lblUber.setText("Car used by Uber ?");
 
         lblCity.setText("Availability Cars in Cities");
 
@@ -186,7 +177,6 @@ public class ViewJPanel extends javax.swing.JPanel {
                             .addGroup(layout.createSequentialGroup()
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addComponent(lblModel, javax.swing.GroupLayout.PREFERRED_SIZE, 181, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(lblUber)
                                     .addComponent(lblFleet, javax.swing.GroupLayout.PREFERRED_SIZE, 189, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addComponent(lblCity, javax.swing.GroupLayout.PREFERRED_SIZE, 189, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addComponent(lblCerti))
@@ -194,10 +184,6 @@ public class ViewJPanel extends javax.swing.JPanel {
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                                     .addComponent(txtFleet, javax.swing.GroupLayout.DEFAULT_SIZE, 168, Short.MAX_VALUE)
                                     .addComponent(txtCity)
-                                    .addGroup(layout.createSequentialGroup()
-                                        .addComponent(btnYes)
-                                        .addGap(29, 29, 29)
-                                        .addComponent(btnNo))
                                     .addComponent(txtModel)
                                     .addComponent(txtExpired))
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 73, Short.MAX_VALUE)))
@@ -251,12 +237,7 @@ public class ViewJPanel extends javax.swing.JPanel {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(lblModel, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(txtModel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(lblUber, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(btnYes)
-                    .addComponent(btnNo))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGap(35, 35, 35)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(lblCity, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(txtCity, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -268,7 +249,7 @@ public class ViewJPanel extends javax.swing.JPanel {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(lblCerti)
                     .addComponent(txtExpired, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(186, Short.MAX_VALUE))
+                .addContainerGap(199, Short.MAX_VALUE))
             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(layout.createSequentialGroup()
                     .addGap(149, 149, 149)
@@ -350,8 +331,10 @@ public class ViewJPanel extends javax.swing.JPanel {
             if(c.getSerialnum().equals(sno)) {
 
             c.setAvail(txtAvailCar.getText());
-            c.setFleet(Integer.parseInt(txtFleet.getText()));
+            c.setSeatnum(txtSeats.getText());
             c.setCity(txtCity.getText());
+            c.setYearofM(Long.parseLong(txtYearManuf.getText()));
+            c.setManuf(txtManuf.getText());
 //            Date date = new Date();
 //            car.setTimeStamp(date);
             }
@@ -363,10 +346,8 @@ public class ViewJPanel extends javax.swing.JPanel {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnDelete;
-    private javax.swing.JRadioButton btnNo;
     private javax.swing.JButton btnUpdate;
     private javax.swing.JButton btnView;
-    private javax.swing.JRadioButton btnYes;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JLabel lblAvailCar;
     private javax.swing.JLabel lblCerti;
@@ -378,7 +359,6 @@ public class ViewJPanel extends javax.swing.JPanel {
     private javax.swing.JLabel lblSeats;
     private javax.swing.JLabel lblSerial;
     private javax.swing.JLabel lblTitle;
-    private javax.swing.JLabel lblUber;
     private javax.swing.JLabel lblYearManuf;
     private javax.swing.JTable tblCars;
     private javax.swing.JTextField txtAvailCar;

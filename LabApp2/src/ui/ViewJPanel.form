@@ -49,7 +49,6 @@
                           <Group type="102" alignment="0" attributes="0">
                               <Group type="103" groupAlignment="0" attributes="0">
                                   <Component id="lblModel" alignment="0" min="-2" pref="181" max="-2" attributes="0"/>
-                                  <Component id="lblUber" alignment="0" min="-2" max="-2" attributes="0"/>
                                   <Component id="lblFleet" alignment="0" min="-2" pref="189" max="-2" attributes="0"/>
                                   <Component id="lblCity" alignment="0" min="-2" pref="189" max="-2" attributes="0"/>
                                   <Component id="lblCerti" alignment="0" min="-2" max="-2" attributes="0"/>
@@ -58,11 +57,6 @@
                               <Group type="103" groupAlignment="0" max="-2" attributes="0">
                                   <Component id="txtFleet" alignment="0" pref="168" max="32767" attributes="0"/>
                                   <Component id="txtCity" alignment="0" max="32767" attributes="0"/>
-                                  <Group type="102" alignment="0" attributes="0">
-                                      <Component id="btnYes" min="-2" max="-2" attributes="0"/>
-                                      <EmptySpace min="-2" pref="29" max="-2" attributes="0"/>
-                                      <Component id="btnNo" min="-2" max="-2" attributes="0"/>
-                                  </Group>
                                   <Component id="txtModel" alignment="0" max="32767" attributes="0"/>
                                   <Component id="txtExpired" max="32767" attributes="0"/>
                               </Group>
@@ -129,13 +123,7 @@
                   <Component id="lblModel" alignment="3" min="-2" pref="36" max="-2" attributes="0"/>
                   <Component id="txtModel" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
-              <EmptySpace max="-2" attributes="0"/>
-              <Group type="103" groupAlignment="3" attributes="0">
-                  <Component id="lblUber" alignment="3" min="-2" pref="36" max="-2" attributes="0"/>
-                  <Component id="btnYes" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="btnNo" alignment="3" min="-2" max="-2" attributes="0"/>
-              </Group>
-              <EmptySpace max="-2" attributes="0"/>
+              <EmptySpace min="-2" pref="35" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
                   <Component id="lblCity" alignment="3" min="-2" pref="36" max="-2" attributes="0"/>
                   <Component id="txtCity" alignment="3" min="-2" max="-2" attributes="0"/>
@@ -150,7 +138,7 @@
                   <Component id="lblCerti" alignment="3" min="-2" max="-2" attributes="0"/>
                   <Component id="txtExpired" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
-              <EmptySpace pref="186" max="32767" attributes="0"/>
+              <EmptySpace pref="199" max="32767" attributes="0"/>
           </Group>
           <Group type="103" rootIndex="1" groupAlignment="0" attributes="0">
               <Group type="102" alignment="0" attributes="0">
@@ -287,16 +275,6 @@
     </Component>
     <Component class="javax.swing.JTextField" name="txtManuf">
     </Component>
-    <Component class="javax.swing.JRadioButton" name="btnYes">
-      <Properties>
-        <Property name="text" type="java.lang.String" value="YES"/>
-      </Properties>
-    </Component>
-    <Component class="javax.swing.JRadioButton" name="btnNo">
-      <Properties>
-        <Property name="text" type="java.lang.String" value="NO"/>
-      </Properties>
-    </Component>
     <Component class="javax.swing.JLabel" name="lblAvailCar">
       <Properties>
         <Property name="text" type="java.lang.String" value="Currently Available Cars"/>
@@ -325,11 +303,6 @@
     <Component class="javax.swing.JLabel" name="lblModel">
       <Properties>
         <Property name="text" type="java.lang.String" value="Model Number"/>
-      </Properties>
-    </Component>
-    <Component class="javax.swing.JLabel" name="lblUber">
-      <Properties>
-        <Property name="text" type="java.lang.String" value="Car used by Uber ?"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JLabel" name="lblCity">
