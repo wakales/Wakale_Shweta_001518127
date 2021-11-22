@@ -13,7 +13,7 @@ import java.util.HashMap;
 
 /**
  *
- * @author ankit
+ * @author 
  */
 public class Restaurant extends UserAccount {
 

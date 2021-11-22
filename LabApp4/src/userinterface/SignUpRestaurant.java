@@ -45,7 +45,7 @@ public class SignUpRestaurant extends javax.swing.JPanel {
      */
     public SignUpRestaurant(EcoSystem e,  DB4OUtil dB4OUtil) {
         initComponents();
-        labImg.setIcon(setIcon(""));
+        //labImg.setIcon(setIcon(""));
         this.e =e;
         this.dB4OUtil =dB4OUtil;
     }

@@ -6,7 +6,7 @@ import Business.UserAccount.UserAccount;
 
 /**
  *
- * @author ankit
+ * @author 
  */
 public class ConfigureASystem {
     
