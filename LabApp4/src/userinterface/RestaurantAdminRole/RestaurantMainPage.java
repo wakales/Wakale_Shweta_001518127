@@ -47,9 +47,9 @@ public class RestaurantMainPage extends javax.swing.JPanel {
         jButton3 = new javax.swing.JButton();
         jPanel2 = new javax.swing.JPanel();
 
-        jSplitPane1.setBackground(new java.awt.Color(0, 255, 255));
+        jSplitPane1.setBackground(new java.awt.Color(255, 255, 255));
 
-        jPanel1.setBackground(new java.awt.Color(0, 255, 255));
+        jPanel1.setBackground(new java.awt.Color(255, 255, 255));
 
         jButton1.setText("Logout");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
