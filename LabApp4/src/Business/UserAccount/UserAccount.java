@@ -10,21 +10,29 @@ import Business.WorkQueue.WorkQueue;
 
 /**
  *
- * @author raunak
+ * @author ankit
  */
 public class UserAccount {
     
     private String username;
     private String password;
-    private Employee employee;
     private Role role;
-    private WorkQueue workQueue;
+    private String contactNo;
 
-    public UserAccount() {
-        workQueue = new WorkQueue();
+    public UserAccount(String usr, String pass, Role r, String contactNo) {
+        this.username = usr;
+        this.password = pass;
+        this.role = r;
+        this.contactNo = contactNo;
     }
-    
-    
+
+    public String getContactNo() {
+        return contactNo;
+    }
+
+    public void setContactNo(String contactNo) {
+        this.contactNo = contactNo;
+    }
     
     public String getUsername() {
         return username;
@@ -46,21 +54,21 @@ public class UserAccount {
         return role;
     }
 
-    public void setEmployee(Employee employee) {
-        this.employee = employee;
-    }
+//    public void setEmployee(Employee employee) {
+//        this.employee = employee;
+//    }
 
     public void setRole(Role role) {
         this.role = role;
     }
 
-    public Employee getEmployee() {
-        return employee;
-    }
-
-    public WorkQueue getWorkQueue() {
-        return workQueue;
-    }
+//    public Employee getEmployee() {
+//        return employee;
+//    }
+//
+//    public WorkQueue getWorkQueue() {
+//        return workQueue;
+//    }
 
     
     

@@ -10,7 +10,7 @@ import javax.swing.JPanel;
 
 /**
  *
- * @author raunak
+ * @author ankit
  */
 
 
@@ -38,6 +38,8 @@ public class ProcessWorkRequestJPanel extends javax.swing.JPanel {
         jLabel1 = new javax.swing.JLabel();
         resultJTextField = new javax.swing.JTextField();
         backJButton = new javax.swing.JButton();
+
+        setBackground(new java.awt.Color(0, 255, 255));
 
         submitJButton.setText("Submit Result");
         submitJButton.addActionListener(new java.awt.event.ActionListener() {
