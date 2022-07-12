@@ -1,0 +1,1216 @@
+<?xml version='1.0' encoding='utf-8' ?>
+
+<!-- build 20214.22.0108.1039                               -->
+<workbook original-version='18.1' source-build='2021.4.3 (20214.22.0108.1039)' source-platform='win' version='18.1' xmlns:user='http://www.tableausoftware.com/xml/user'>
+  <document-format-change-manifest>
+    <_.fcp.AnimationOnByDefault.true...AnimationOnByDefault />
+    <IntuitiveSorting />
+    <IntuitiveSorting_SP2 />
+    <_.fcp.MarkAnimation.true...MarkAnimation />
+    <_.fcp.ObjectModelEncapsulateLegacy.true...ObjectModelEncapsulateLegacy />
+    <_.fcp.ObjectModelRelationshipPerfOptions.true...ObjectModelRelationshipPerfOptions />
+    <_.fcp.ObjectModelTableType.true...ObjectModelTableType />
+    <_.fcp.SchemaViewerObjectModel.true...SchemaViewerObjectModel />
+    <SheetIdentifierTracking />
+    <WindowsPersistSimpleIdentifiers />
+  </document-format-change-manifest>
+  <preferences>
+    <preference name='ui.encoding.shelf.height' value='24' />
+    <preference name='ui.shelf.height' value='26' />
+  </preferences>
+  <_.fcp.AnimationOnByDefault.false...style>
+    <_.fcp.AnimationOnByDefault.false..._.fcp.MarkAnimation.true...style-rule element='animation'>
+      <_.fcp.AnimationOnByDefault.false...format attr='animation-on' value='ao-on' />
+    </_.fcp.AnimationOnByDefault.false..._.fcp.MarkAnimation.true...style-rule>
+  </_.fcp.AnimationOnByDefault.false...style>
+  <datasources>
+    <datasource caption='BI_list_titles (imdb_bi)' inline='true' name='federated.1wxi8w7099jf6g14e715w1e3gxh4' version='18.1'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='LAPTOP-6ENRA360' name='sqlserver.0zfrldk183tqxy10no4md1sgu1n2'>
+            <connection authentication='sspi' class='sqlserver' dbname='imdb_bi' odbc-native-protocol='yes' one-time-sql='' server='LAPTOP-6ENRA360' />
+          </named-connection>
+        </named-connections>
+        <_.fcp.ObjectModelEncapsulateLegacy.false...relation connection='sqlserver.0zfrldk183tqxy10no4md1sgu1n2' name='BI_list_titles' table='[dbo].[BI_list_titles]' type='table' />
+        <_.fcp.ObjectModelEncapsulateLegacy.true...relation type='collection'>
+          <relation connection='sqlserver.0zfrldk183tqxy10no4md1sgu1n2' name='BI_list_titles' table='[dbo].[BI_list_titles]' type='table' />
+          <relation connection='sqlserver.0zfrldk183tqxy10no4md1sgu1n2' name='dim_imdb_title_basics' table='[dbo].[dim_imdb_title_basics]' type='table' />
+          <relation connection='sqlserver.0zfrldk183tqxy10no4md1sgu1n2' name='fct_imdb_title_ratings' table='[dbo].[fct_imdb_title_ratings]' type='table' />
+          <relation connection='sqlserver.0zfrldk183tqxy10no4md1sgu1n2' name='fct_movies_box_office_worldwide' table='[dbo].[fct_movies_box_office_worldwide]' type='table' />
+        </_.fcp.ObjectModelEncapsulateLegacy.true...relation>
+        <cols>
+          <map key='[BoxOffice_Rank]' value='[fct_movies_box_office_worldwide].[BoxOffice_Rank]' />
+          <map key='[DI_Create_DT (dim_imdb_title_basics)]' value='[dim_imdb_title_basics].[DI_Create_DT]' />
+          <map key='[DI_Create_DT (fct_imdb_title_ratings)]' value='[fct_imdb_title_ratings].[DI_Create_DT]' />
+          <map key='[DI_Create_DT (fct_movies_box_office_worldwide)]' value='[fct_movies_box_office_worldwide].[DI_Create_DT]' />
+          <map key='[DI_Create_DT]' value='[BI_list_titles].[DI_Create_DT]' />
+          <map key='[DI_JobID (dim_imdb_title_basics)]' value='[dim_imdb_title_basics].[DI_JobID]' />
+          <map key='[DI_JobID (fct_imdb_title_ratings)]' value='[fct_imdb_title_ratings].[DI_JobID]' />
+          <map key='[DI_JobID (fct_movies_box_office_worldwide)]' value='[fct_movies_box_office_worldwide].[DI_JobID]' />
+          <map key='[DI_JobID]' value='[BI_list_titles].[DI_JobID]' />
+          <map key='[Domestic_LifetimeGross]' value='[fct_movies_box_office_worldwide].[Domestic_LifetimeGross]' />
+          <map key='[Domestic_Pct]' value='[fct_movies_box_office_worldwide].[Domestic_Pct]' />
+          <map key='[Foreign_LifetimeGross]' value='[fct_movies_box_office_worldwide].[Foreign_LifetimeGross]' />
+          <map key='[Foreign_Pct]' value='[fct_movies_box_office_worldwide].[Foreign_Pct]' />
+          <map key='[Release_Year]' value='[fct_movies_box_office_worldwide].[Release_Year]' />
+          <map key='[Worldwide_LifetimeGross]' value='[fct_movies_box_office_worldwide].[Worldwide_LifetimeGross]' />
+          <map key='[averageRating]' value='[fct_imdb_title_ratings].[averageRating]' />
+          <map key='[endYear]' value='[dim_imdb_title_basics].[endYear]' />
+          <map key='[expandedList]' value='[BI_list_titles].[expandedList]' />
+          <map key='[fileName]' value='[BI_list_titles].[fileName]' />
+          <map key='[isAdult]' value='[dim_imdb_title_basics].[isAdult]' />
+          <map key='[listRank]' value='[BI_list_titles].[listRank]' />
+          <map key='[ml_title]' value='[dim_imdb_title_basics].[ml_title]' />
+          <map key='[movies_box_office_worldwide_sk]' value='[fct_movies_box_office_worldwide].[movies_box_office_worldwide_sk]' />
+          <map key='[numVotes]' value='[fct_imdb_title_ratings].[numVotes]' />
+          <map key='[originalTitle]' value='[dim_imdb_title_basics].[originalTitle]' />
+          <map key='[primaryTitle (dim_imdb_title_basics)]' value='[dim_imdb_title_basics].[primaryTitle]' />
+          <map key='[primaryTitle]' value='[BI_list_titles].[primaryTitle]' />
+          <map key='[runtimeMinutes]' value='[dim_imdb_title_basics].[runtimeMinutes]' />
+          <map key='[startYear]' value='[dim_imdb_title_basics].[startYear]' />
+          <map key='[tconst (dim_imdb_title_basics)]' value='[dim_imdb_title_basics].[tconst]' />
+          <map key='[tconst]' value='[BI_list_titles].[tconst]' />
+          <map key='[titleType_sk]' value='[dim_imdb_title_basics].[titleType_sk]' />
+          <map key='[title_imdb_url]' value='[dim_imdb_title_basics].[title_imdb_url]' />
+          <map key='[title_ratings_sk]' value='[fct_imdb_title_ratings].[title_ratings_sk]' />
+          <map key='[title_sk (dim_imdb_title_basics)]' value='[dim_imdb_title_basics].[title_sk]' />
+          <map key='[title_sk (fct_imdb_title_ratings)]' value='[fct_imdb_title_ratings].[title_sk]' />
+          <map key='[title_sk (fct_movies_box_office_worldwide)]' value='[fct_movies_box_office_worldwide].[title_sk]' />
+          <map key='[title_sk]' value='[BI_list_titles].[title_sk]' />
+        </cols>
+        <metadata-records>
+          <metadata-record class='column'>
+            <remote-name>listRank</remote-name>
+            <remote-type>3</remote-type>
+            <local-name>[listRank]</local-name>
+            <parent-name>[BI_list_titles]</parent-name>
+            <remote-alias>listRank</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>10</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_INTEGER&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_SLONG&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[BI_list_titles_5F4199A1F8C4466983FF8FEF9B614996]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>title_sk</remote-name>
+            <remote-type>3</remote-type>
+            <local-name>[title_sk]</local-name>
+            <parent-name>[BI_list_titles]</parent-name>
+            <remote-alias>title_sk</remote-alias>
+            <ordinal>2</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>10</precision>
+            <contains-null>false</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_INTEGER&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_SLONG&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[BI_list_titles_5F4199A1F8C4466983FF8FEF9B614996]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>tconst</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[tconst]</local-name>
+            <parent-name>[BI_list_titles]</parent-name>
+            <remote-alias>tconst</remote-alias>
+            <ordinal>3</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>10</width>
+            <contains-null>false</contains-null>
+            <padded-semantics>true</padded-semantics>
+            <collation flag='2147483649' name='LEN_RUS_S2_VWIN' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_VARCHAR&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_CHAR&quot;</attribute>
+              <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[BI_list_titles_5F4199A1F8C4466983FF8FEF9B614996]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>primaryTitle</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[primaryTitle]</local-name>
+            <parent-name>[BI_list_titles]</parent-name>
+            <remote-alias>primaryTitle</remote-alias>
+            <ordinal>4</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>1024</width>
+            <contains-null>true</contains-null>
+            <padded-semantics>true</padded-semantics>
+            <collation flag='2147483649' name='LEN_RUS_S2_VWIN' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_VARCHAR&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_CHAR&quot;</attribute>
+              <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[BI_list_titles_5F4199A1F8C4466983FF8FEF9B614996]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>fileName</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[fileName]</local-name>
+            <parent-name>[BI_list_titles]</parent-name>
+            <remote-alias>fileName</remote-alias>
+            <ordinal>5</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>512</width>
+            <contains-null>true</contains-null>
+            <padded-semantics>true</padded-semantics>
+            <collation flag='2147483649' name='LEN_RUS_S2_VWIN' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_VARCHAR&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_CHAR&quot;</attribute>
+              <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[BI_list_titles_5F4199A1F8C4466983FF8FEF9B614996]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>expandedList</remote-name>
+            <remote-type>3</remote-type>
+            <local-name>[expandedList]</local-name>
+            <parent-name>[BI_list_titles]</parent-name>
+            <remote-alias>expandedList</remote-alias>
+            <ordinal>6</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>10</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_INTEGER&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_SLONG&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[BI_list_titles_5F4199A1F8C4466983FF8FEF9B614996]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>DI_JobID</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[DI_JobID]</local-name>
+            <parent-name>[BI_list_titles]</parent-name>
+            <remote-alias>DI_JobID</remote-alias>
+            <ordinal>7</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>20</width>
+            <contains-null>false</contains-null>
+            <padded-semantics>true</padded-semantics>
+            <collation flag='2147483649' name='LEN_RUS_S2_VWIN' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_VARCHAR&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_CHAR&quot;</attribute>
+              <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[BI_list_titles_5F4199A1F8C4466983FF8FEF9B614996]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>DI_Create_DT</remote-name>
+            <remote-type>7</remote-type>
+            <local-name>[DI_Create_DT]</local-name>
+            <parent-name>[BI_list_titles]</parent-name>
+            <remote-alias>DI_Create_DT</remote-alias>
+            <ordinal>8</ordinal>
+            <local-type>datetime</local-type>
+            <aggregation>Year</aggregation>
+            <contains-null>false</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_TYPE_TIMESTAMP&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_TYPE_TIMESTAMP&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[BI_list_titles_5F4199A1F8C4466983FF8FEF9B614996]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>title_sk</remote-name>
+            <remote-type>3</remote-type>
+            <local-name>[title_sk (dim_imdb_title_basics)]</local-name>
+            <parent-name>[dim_imdb_title_basics]</parent-name>
+            <remote-alias>title_sk</remote-alias>
+            <ordinal>10</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>10</precision>
+            <contains-null>false</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_INTEGER&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_SLONG&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[dim_imdb_title_basics_50FF8A92669C40F2A521B25A93BCA219]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>tconst</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[tconst (dim_imdb_title_basics)]</local-name>
+            <parent-name>[dim_imdb_title_basics]</parent-name>
+            <remote-alias>tconst</remote-alias>
+            <ordinal>11</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>10</width>
+            <contains-null>false</contains-null>
+            <padded-semantics>true</padded-semantics>
+            <collation flag='2147483649' name='LEN_RUS_S2_VWIN' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_VARCHAR&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_CHAR&quot;</attribute>
+              <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[dim_imdb_title_basics_50FF8A92669C40F2A521B25A93BCA219]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>titleType_sk</remote-name>
+            <remote-type>3</remote-type>
+            <local-name>[titleType_sk]</local-name>
+            <parent-name>[dim_imdb_title_basics]</parent-name>
+            <remote-alias>titleType_sk</remote-alias>
+            <ordinal>12</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>10</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_INTEGER&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_SLONG&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[dim_imdb_title_basics_50FF8A92669C40F2A521B25A93BCA219]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>primaryTitle</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[primaryTitle (dim_imdb_title_basics)]</local-name>
+            <parent-name>[dim_imdb_title_basics]</parent-name>
+            <remote-alias>primaryTitle</remote-alias>
+            <ordinal>13</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>1024</width>
+            <contains-null>true</contains-null>
+            <padded-semantics>true</padded-semantics>
+            <collation flag='2147483649' name='LEN_RUS_S2_VWIN' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_VARCHAR&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_CHAR&quot;</attribute>
+              <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[dim_imdb_title_basics_50FF8A92669C40F2A521B25A93BCA219]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>originalTitle</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[originalTitle]</local-name>
+            <parent-name>[dim_imdb_title_basics]</parent-name>
+            <remote-alias>originalTitle</remote-alias>
+            <ordinal>14</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>1024</width>
+            <contains-null>true</contains-null>
+            <padded-semantics>true</padded-semantics>
+            <collation flag='2147483649' name='LEN_RUS_S2_VWIN' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_VARCHAR&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_CHAR&quot;</attribute>
+              <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[dim_imdb_title_basics_50FF8A92669C40F2A521B25A93BCA219]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>ml_title</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[ml_title]</local-name>
+            <parent-name>[dim_imdb_title_basics]</parent-name>
+            <remote-alias>ml_title</remote-alias>
+            <ordinal>15</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>255</width>
+            <contains-null>true</contains-null>
+            <padded-semantics>true</padded-semantics>
+            <collation flag='2147483649' name='LEN_RUS_S2_VWIN' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_VARCHAR&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_CHAR&quot;</attribute>
+              <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[dim_imdb_title_basics_50FF8A92669C40F2A521B25A93BCA219]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>isAdult</remote-name>
+            <remote-type>11</remote-type>
+            <local-name>[isAdult]</local-name>
+            <parent-name>[dim_imdb_title_basics]</parent-name>
+            <remote-alias>isAdult</remote-alias>
+            <ordinal>16</ordinal>
+            <local-type>boolean</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_BIT&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_BIT&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[dim_imdb_title_basics_50FF8A92669C40F2A521B25A93BCA219]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>startYear</remote-name>
+            <remote-type>3</remote-type>
+            <local-name>[startYear]</local-name>
+            <parent-name>[dim_imdb_title_basics]</parent-name>
+            <remote-alias>startYear</remote-alias>
+            <ordinal>17</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>10</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_INTEGER&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_SLONG&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[dim_imdb_title_basics_50FF8A92669C40F2A521B25A93BCA219]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>endYear</remote-name>
+            <remote-type>3</remote-type>
+            <local-name>[endYear]</local-name>
+            <parent-name>[dim_imdb_title_basics]</parent-name>
+            <remote-alias>endYear</remote-alias>
+            <ordinal>18</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>10</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_INTEGER&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_SLONG&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[dim_imdb_title_basics_50FF8A92669C40F2A521B25A93BCA219]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>runtimeMinutes</remote-name>
+            <remote-type>3</remote-type>
+            <local-name>[runtimeMinutes]</local-name>
+            <parent-name>[dim_imdb_title_basics]</parent-name>
+            <remote-alias>runtimeMinutes</remote-alias>
+            <ordinal>19</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>10</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_INTEGER&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_SLONG&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[dim_imdb_title_basics_50FF8A92669C40F2A521B25A93BCA219]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>title_imdb_url</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[title_imdb_url]</local-name>
+            <parent-name>[dim_imdb_title_basics]</parent-name>
+            <remote-alias>title_imdb_url</remote-alias>
+            <ordinal>20</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>255</width>
+            <contains-null>true</contains-null>
+            <padded-semantics>true</padded-semantics>
+            <collation flag='2147483649' name='LEN_RUS_S2_VWIN' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_VARCHAR&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_CHAR&quot;</attribute>
+              <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[dim_imdb_title_basics_50FF8A92669C40F2A521B25A93BCA219]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>DI_JobID</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[DI_JobID (dim_imdb_title_basics)]</local-name>
+            <parent-name>[dim_imdb_title_basics]</parent-name>
+            <remote-alias>DI_JobID</remote-alias>
+            <ordinal>21</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>20</width>
+            <contains-null>false</contains-null>
+            <padded-semantics>true</padded-semantics>
+            <collation flag='2147483649' name='LEN_RUS_S2_VWIN' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_VARCHAR&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_CHAR&quot;</attribute>
+              <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[dim_imdb_title_basics_50FF8A92669C40F2A521B25A93BCA219]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>DI_Create_DT</remote-name>
+            <remote-type>7</remote-type>
+            <local-name>[DI_Create_DT (dim_imdb_title_basics)]</local-name>
+            <parent-name>[dim_imdb_title_basics]</parent-name>
+            <remote-alias>DI_Create_DT</remote-alias>
+            <ordinal>22</ordinal>
+            <local-type>datetime</local-type>
+            <aggregation>Year</aggregation>
+            <contains-null>false</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_TYPE_TIMESTAMP&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_TYPE_TIMESTAMP&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[dim_imdb_title_basics_50FF8A92669C40F2A521B25A93BCA219]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>title_ratings_sk</remote-name>
+            <remote-type>3</remote-type>
+            <local-name>[title_ratings_sk]</local-name>
+            <parent-name>[fct_imdb_title_ratings]</parent-name>
+            <remote-alias>title_ratings_sk</remote-alias>
+            <ordinal>24</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>10</precision>
+            <contains-null>false</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_INTEGER&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_SLONG&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[fct_imdb_title_ratings_D9C01431BBFD484CB6BD9C7682E2F710]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>title_sk</remote-name>
+            <remote-type>3</remote-type>
+            <local-name>[title_sk (fct_imdb_title_ratings)]</local-name>
+            <parent-name>[fct_imdb_title_ratings]</parent-name>
+            <remote-alias>title_sk</remote-alias>
+            <ordinal>25</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>10</precision>
+            <contains-null>false</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_INTEGER&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_SLONG&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[fct_imdb_title_ratings_D9C01431BBFD484CB6BD9C7682E2F710]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>averageRating</remote-name>
+            <remote-type>4</remote-type>
+            <local-name>[averageRating]</local-name>
+            <parent-name>[fct_imdb_title_ratings]</parent-name>
+            <remote-alias>averageRating</remote-alias>
+            <ordinal>26</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>6</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_REAL&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_FLOAT&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[fct_imdb_title_ratings_D9C01431BBFD484CB6BD9C7682E2F710]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>numVotes</remote-name>
+            <remote-type>3</remote-type>
+            <local-name>[numVotes]</local-name>
+            <parent-name>[fct_imdb_title_ratings]</parent-name>
+            <remote-alias>numVotes</remote-alias>
+            <ordinal>27</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>10</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_INTEGER&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_SLONG&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[fct_imdb_title_ratings_D9C01431BBFD484CB6BD9C7682E2F710]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>DI_JobID</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[DI_JobID (fct_imdb_title_ratings)]</local-name>
+            <parent-name>[fct_imdb_title_ratings]</parent-name>
+            <remote-alias>DI_JobID</remote-alias>
+            <ordinal>28</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>20</width>
+            <contains-null>false</contains-null>
+            <padded-semantics>true</padded-semantics>
+            <collation flag='2147483649' name='LEN_RUS_S2_VWIN' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_VARCHAR&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_CHAR&quot;</attribute>
+              <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[fct_imdb_title_ratings_D9C01431BBFD484CB6BD9C7682E2F710]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>DI_Create_DT</remote-name>
+            <remote-type>7</remote-type>
+            <local-name>[DI_Create_DT (fct_imdb_title_ratings)]</local-name>
+            <parent-name>[fct_imdb_title_ratings]</parent-name>
+            <remote-alias>DI_Create_DT</remote-alias>
+            <ordinal>29</ordinal>
+            <local-type>datetime</local-type>
+            <aggregation>Year</aggregation>
+            <contains-null>false</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_TYPE_TIMESTAMP&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_TYPE_TIMESTAMP&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[fct_imdb_title_ratings_D9C01431BBFD484CB6BD9C7682E2F710]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>movies_box_office_worldwide_sk</remote-name>
+            <remote-type>3</remote-type>
+            <local-name>[movies_box_office_worldwide_sk]</local-name>
+            <parent-name>[fct_movies_box_office_worldwide]</parent-name>
+            <remote-alias>movies_box_office_worldwide_sk</remote-alias>
+            <ordinal>31</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>10</precision>
+            <contains-null>false</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_INTEGER&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_SLONG&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[fct_movies_box_office_worldwide_BFEF6CA0DFBD42CF8F6AE15D223D79F9]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>title_sk</remote-name>
+            <remote-type>3</remote-type>
+            <local-name>[title_sk (fct_movies_box_office_worldwide)]</local-name>
+            <parent-name>[fct_movies_box_office_worldwide]</parent-name>
+            <remote-alias>title_sk</remote-alias>
+            <ordinal>32</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>10</precision>
+            <contains-null>false</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_INTEGER&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_SLONG&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[fct_movies_box_office_worldwide_BFEF6CA0DFBD42CF8F6AE15D223D79F9]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>BoxOffice_Rank</remote-name>
+            <remote-type>3</remote-type>
+            <local-name>[BoxOffice_Rank]</local-name>
+            <parent-name>[fct_movies_box_office_worldwide]</parent-name>
+            <remote-alias>BoxOffice_Rank</remote-alias>
+            <ordinal>33</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>10</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_INTEGER&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_SLONG&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[fct_movies_box_office_worldwide_BFEF6CA0DFBD42CF8F6AE15D223D79F9]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Worldwide_LifetimeGross</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Worldwide_LifetimeGross]</local-name>
+            <parent-name>[fct_movies_box_office_worldwide]</parent-name>
+            <remote-alias>Worldwide_LifetimeGross</remote-alias>
+            <ordinal>34</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>19</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_BIGINT&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_SBIGINT&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[fct_movies_box_office_worldwide_BFEF6CA0DFBD42CF8F6AE15D223D79F9]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Domestic_LifetimeGross</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Domestic_LifetimeGross]</local-name>
+            <parent-name>[fct_movies_box_office_worldwide]</parent-name>
+            <remote-alias>Domestic_LifetimeGross</remote-alias>
+            <ordinal>35</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>19</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_BIGINT&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_SBIGINT&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[fct_movies_box_office_worldwide_BFEF6CA0DFBD42CF8F6AE15D223D79F9]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Domestic_Pct</remote-name>
+            <remote-type>131</remote-type>
+            <local-name>[Domestic_Pct]</local-name>
+            <parent-name>[fct_movies_box_office_worldwide]</parent-name>
+            <remote-alias>Domestic_Pct</remote-alias>
+            <ordinal>36</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>10</precision>
+            <scale>3</scale>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_DECIMAL&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_NUMERIC&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[fct_movies_box_office_worldwide_BFEF6CA0DFBD42CF8F6AE15D223D79F9]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Foreign_LifetimeGross</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Foreign_LifetimeGross]</local-name>
+            <parent-name>[fct_movies_box_office_worldwide]</parent-name>
+            <remote-alias>Foreign_LifetimeGross</remote-alias>
+            <ordinal>37</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>19</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_BIGINT&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_SBIGINT&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[fct_movies_box_office_worldwide_BFEF6CA0DFBD42CF8F6AE15D223D79F9]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Foreign_Pct</remote-name>
+            <remote-type>131</remote-type>
+            <local-name>[Foreign_Pct]</local-name>
+            <parent-name>[fct_movies_box_office_worldwide]</parent-name>
+            <remote-alias>Foreign_Pct</remote-alias>
+            <ordinal>38</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>10</precision>
+            <scale>3</scale>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_DECIMAL&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_NUMERIC&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[fct_movies_box_office_worldwide_BFEF6CA0DFBD42CF8F6AE15D223D79F9]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Release_Year</remote-name>
+            <remote-type>3</remote-type>
+            <local-name>[Release_Year]</local-name>
+            <parent-name>[fct_movies_box_office_worldwide]</parent-name>
+            <remote-alias>Release_Year</remote-alias>
+            <ordinal>39</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>10</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_INTEGER&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_SLONG&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[fct_movies_box_office_worldwide_BFEF6CA0DFBD42CF8F6AE15D223D79F9]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>DI_JobID</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[DI_JobID (fct_movies_box_office_worldwide)]</local-name>
+            <parent-name>[fct_movies_box_office_worldwide]</parent-name>
+            <remote-alias>DI_JobID</remote-alias>
+            <ordinal>40</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>20</width>
+            <contains-null>false</contains-null>
+            <padded-semantics>true</padded-semantics>
+            <collation flag='2147483649' name='LEN_RUS_S2_VWIN' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_VARCHAR&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_CHAR&quot;</attribute>
+              <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[fct_movies_box_office_worldwide_BFEF6CA0DFBD42CF8F6AE15D223D79F9]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>DI_Create_DT</remote-name>
+            <remote-type>7</remote-type>
+            <local-name>[DI_Create_DT (fct_movies_box_office_worldwide)]</local-name>
+            <parent-name>[fct_movies_box_office_worldwide]</parent-name>
+            <remote-alias>DI_Create_DT</remote-alias>
+            <ordinal>41</ordinal>
+            <local-type>datetime</local-type>
+            <aggregation>Year</aggregation>
+            <contains-null>false</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_TYPE_TIMESTAMP&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_TYPE_TIMESTAMP&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[fct_movies_box_office_worldwide_BFEF6CA0DFBD42CF8F6AE15D223D79F9]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled='yes' />
+      <column caption='BoxOffice Rank' datatype='integer' name='[BoxOffice_Rank]' role='measure' type='quantitative' />
+      <column caption='DI Create DT (dim imdb title basics)' datatype='datetime' name='[DI_Create_DT (dim_imdb_title_basics)]' role='dimension' type='ordinal' />
+      <column caption='DI Create DT (fct imdb title ratings)' datatype='datetime' name='[DI_Create_DT (fct_imdb_title_ratings)]' role='dimension' type='ordinal' />
+      <column caption='DI Create DT (fct movies box office worldwide)' datatype='datetime' name='[DI_Create_DT (fct_movies_box_office_worldwide)]' role='dimension' type='ordinal' />
+      <column caption='DI Create DT' datatype='datetime' name='[DI_Create_DT]' role='dimension' type='ordinal' />
+      <column caption='DI JobID (dim imdb title basics)' datatype='string' name='[DI_JobID (dim_imdb_title_basics)]' role='dimension' type='nominal' />
+      <column caption='DI JobID (fct imdb title ratings)' datatype='string' name='[DI_JobID (fct_imdb_title_ratings)]' role='dimension' type='nominal' />
+      <column caption='DI JobID (fct movies box office worldwide)' datatype='string' name='[DI_JobID (fct_movies_box_office_worldwide)]' role='dimension' type='nominal' />
+      <column caption='DI JobID' datatype='string' name='[DI_JobID]' role='dimension' type='nominal' />
+      <column caption='Domestic LifetimeGross' datatype='integer' name='[Domestic_LifetimeGross]' role='measure' type='quantitative' />
+      <column caption='Domestic Pct' datatype='real' name='[Domestic_Pct]' role='measure' type='quantitative' />
+      <column caption='Foreign LifetimeGross' datatype='integer' name='[Foreign_LifetimeGross]' role='measure' type='quantitative' />
+      <column caption='Foreign Pct' datatype='real' name='[Foreign_Pct]' role='measure' type='quantitative' />
+      <column caption='Release Year' datatype='integer' name='[Release_Year]' role='dimension' type='quantitative' />
+      <column caption='Worldwide LifetimeGross' datatype='integer' name='[Worldwide_LifetimeGross]' role='measure' type='quantitative' />
+      <_.fcp.ObjectModelTableType.true...column caption='BI_list_titles' datatype='table' name='[__tableau_internal_object_id__].[BI_list_titles_5F4199A1F8C4466983FF8FEF9B614996]' role='measure' type='quantitative' />
+      <_.fcp.ObjectModelTableType.true...column caption='dim_imdb_title_basics' datatype='table' name='[__tableau_internal_object_id__].[dim_imdb_title_basics_50FF8A92669C40F2A521B25A93BCA219]' role='measure' type='quantitative' />
+      <_.fcp.ObjectModelTableType.true...column caption='fct_imdb_title_ratings' datatype='table' name='[__tableau_internal_object_id__].[fct_imdb_title_ratings_D9C01431BBFD484CB6BD9C7682E2F710]' role='measure' type='quantitative' />
+      <_.fcp.ObjectModelTableType.true...column caption='fct_movies_box_office_worldwide' datatype='table' name='[__tableau_internal_object_id__].[fct_movies_box_office_worldwide_BFEF6CA0DFBD42CF8F6AE15D223D79F9]' role='measure' type='quantitative' />
+      <column caption='Average Rating' datatype='real' name='[averageRating]' role='measure' type='quantitative' />
+      <column caption='End Year' datatype='integer' name='[endYear]' role='dimension' type='quantitative' />
+      <column caption='Expanded List' datatype='integer' name='[expandedList]' role='measure' type='quantitative' />
+      <column caption='File Name' datatype='string' name='[fileName]' role='dimension' type='nominal' />
+      <column caption='Is Adult' datatype='boolean' name='[isAdult]' role='dimension' type='nominal' />
+      <column caption='List Rank' datatype='integer' name='[listRank]' role='measure' type='quantitative' />
+      <column caption='Ml Title' datatype='string' name='[ml_title]' role='dimension' type='nominal' />
+      <column caption='Movies Box Office Worldwide Sk' datatype='integer' name='[movies_box_office_worldwide_sk]' role='measure' type='quantitative' />
+      <column caption='Num Votes' datatype='integer' name='[numVotes]' role='measure' type='quantitative' />
+      <column caption='Original Title' datatype='string' name='[originalTitle]' role='dimension' type='nominal' />
+      <column caption='primaryTitle (dim imdb title basics)' datatype='string' name='[primaryTitle (dim_imdb_title_basics)]' role='dimension' type='nominal' />
+      <column caption='Primary Title' datatype='string' name='[primaryTitle]' role='dimension' type='nominal' />
+      <column caption='Runtime Minutes' datatype='integer' name='[runtimeMinutes]' role='measure' type='quantitative' />
+      <column caption='Start Year' datatype='integer' name='[startYear]' role='dimension' type='quantitative' />
+      <column caption='Tconst (Dim Imdb Title Basics)' datatype='string' name='[tconst (dim_imdb_title_basics)]' role='dimension' type='nominal' />
+      <column caption='Tconst' datatype='string' name='[tconst]' role='dimension' type='nominal' />
+      <column caption='titleType sk' datatype='integer' name='[titleType_sk]' role='measure' type='quantitative' />
+      <column caption='Title Imdb Url' datatype='string' name='[title_imdb_url]' role='dimension' type='nominal' />
+      <column caption='Title Ratings Sk' datatype='integer' name='[title_ratings_sk]' role='measure' type='quantitative' />
+      <column caption='Title Sk (Dim Imdb Title Basics)' datatype='integer' name='[title_sk (dim_imdb_title_basics)]' role='measure' type='quantitative' />
+      <column caption='Title Sk (Fct Imdb Title Ratings)' datatype='integer' name='[title_sk (fct_imdb_title_ratings)]' role='measure' type='quantitative' />
+      <column caption='Title Sk (Fct Movies Box Office Worldwide)' datatype='integer' name='[title_sk (fct_movies_box_office_worldwide)]' role='measure' type='quantitative' />
+      <column caption='Title Sk' datatype='integer' name='[title_sk]' role='measure' type='quantitative' />
+      <layout _.fcp.SchemaViewerObjectModel.false...dim-percentage='0.5' _.fcp.SchemaViewerObjectModel.false...measure-percentage='0.4' dim-ordering='alphabetic' measure-ordering='alphabetic' show-structure='true' />
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;India&quot;' />
+      </semantic-values>
+      <_.fcp.ObjectModelEncapsulateLegacy.true...object-graph>
+        <objects>
+          <object caption='BI_list_titles' id='BI_list_titles_5F4199A1F8C4466983FF8FEF9B614996'>
+            <properties context=''>
+              <relation connection='sqlserver.0zfrldk183tqxy10no4md1sgu1n2' name='BI_list_titles' table='[dbo].[BI_list_titles]' type='table' />
+            </properties>
+          </object>
+          <object caption='dim_imdb_title_basics' id='dim_imdb_title_basics_50FF8A92669C40F2A521B25A93BCA219'>
+            <properties context=''>
+              <relation connection='sqlserver.0zfrldk183tqxy10no4md1sgu1n2' name='dim_imdb_title_basics' table='[dbo].[dim_imdb_title_basics]' type='table' />
+            </properties>
+          </object>
+          <object caption='fct_imdb_title_ratings' id='fct_imdb_title_ratings_D9C01431BBFD484CB6BD9C7682E2F710'>
+            <properties context=''>
+              <relation connection='sqlserver.0zfrldk183tqxy10no4md1sgu1n2' name='fct_imdb_title_ratings' table='[dbo].[fct_imdb_title_ratings]' type='table' />
+            </properties>
+          </object>
+          <object caption='fct_movies_box_office_worldwide' id='fct_movies_box_office_worldwide_BFEF6CA0DFBD42CF8F6AE15D223D79F9'>
+            <properties context=''>
+              <relation connection='sqlserver.0zfrldk183tqxy10no4md1sgu1n2' name='fct_movies_box_office_worldwide' table='[dbo].[fct_movies_box_office_worldwide]' type='table' />
+            </properties>
+          </object>
+        </objects>
+        <relationships>
+          <relationship>
+            <expression op='='>
+              <expression op='[title_sk]' />
+              <expression op='[title_sk (dim_imdb_title_basics)]' />
+            </expression>
+            <first-end-point _.fcp.ObjectModelRelationshipPerfOptions.true...is-db-set-unique-key='true' object-id='BI_list_titles_5F4199A1F8C4466983FF8FEF9B614996' unique-key='true' />
+            <second-end-point _.fcp.ObjectModelRelationshipPerfOptions.true...is-db-set-unique-key='true' object-id='dim_imdb_title_basics_50FF8A92669C40F2A521B25A93BCA219' unique-key='true' />
+          </relationship>
+          <relationship>
+            <expression op='='>
+              <expression op='[title_sk]' />
+              <expression op='[title_sk (fct_imdb_title_ratings)]' />
+            </expression>
+            <first-end-point _.fcp.ObjectModelRelationshipPerfOptions.true...is-db-set-unique-key='true' object-id='BI_list_titles_5F4199A1F8C4466983FF8FEF9B614996' unique-key='true' />
+            <second-end-point object-id='fct_imdb_title_ratings_D9C01431BBFD484CB6BD9C7682E2F710' />
+          </relationship>
+          <relationship>
+            <expression op='='>
+              <expression op='[title_sk]' />
+              <expression op='[title_sk (fct_movies_box_office_worldwide)]' />
+            </expression>
+            <first-end-point _.fcp.ObjectModelRelationshipPerfOptions.true...is-db-set-unique-key='true' object-id='BI_list_titles_5F4199A1F8C4466983FF8FEF9B614996' unique-key='true' />
+            <second-end-point object-id='fct_movies_box_office_worldwide_BFEF6CA0DFBD42CF8F6AE15D223D79F9' />
+          </relationship>
+        </relationships>
+      </_.fcp.ObjectModelEncapsulateLegacy.true...object-graph>
+    </datasource>
+  </datasources>
+  <worksheets>
+    <worksheet name='Top 1000 movies by worldwide gross'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='BI_list_titles (imdb_bi)' name='federated.1wxi8w7099jf6g14e715w1e3gxh4' />
+          </datasources>
+          <datasource-dependencies datasource='federated.1wxi8w7099jf6g14e715w1e3gxh4'>
+            <column caption='BoxOffice Rank' datatype='integer' name='[BoxOffice_Rank]' role='measure' type='quantitative' />
+            <column caption='Domestic LifetimeGross' datatype='integer' name='[Domestic_LifetimeGross]' role='measure' type='quantitative' />
+            <column caption='Foreign LifetimeGross' datatype='integer' name='[Foreign_LifetimeGross]' role='measure' type='quantitative' />
+            <column caption='Release Year' datatype='integer' name='[Release_Year]' role='dimension' type='quantitative' />
+            <column caption='Worldwide LifetimeGross' datatype='integer' name='[Worldwide_LifetimeGross]' role='measure' type='quantitative' />
+            <column-instance column='[Release_Year]' derivation='None' name='[none:Release_Year:ok]' pivot='key' type='ordinal' />
+            <column-instance column='[primaryTitle]' derivation='None' name='[none:primaryTitle:nk]' pivot='key' type='nominal' />
+            <column caption='Primary Title' datatype='string' name='[primaryTitle]' role='dimension' type='nominal' />
+            <column caption='Runtime Minutes' datatype='integer' name='[runtimeMinutes]' role='measure' type='quantitative' />
+            <column-instance column='[BoxOffice_Rank]' derivation='Sum' name='[sum:BoxOffice_Rank:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Domestic_LifetimeGross]' derivation='Sum' name='[sum:Domestic_LifetimeGross:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Foreign_LifetimeGross]' derivation='Sum' name='[sum:Foreign_LifetimeGross:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Worldwide_LifetimeGross]' derivation='Sum' name='[sum:Worldwide_LifetimeGross:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[runtimeMinutes]' derivation='Sum' name='[sum:runtimeMinutes:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[title_ratings_sk]' derivation='Sum' name='[sum:title_ratings_sk:qk]' pivot='key' type='quantitative' />
+            <column caption='Title Ratings Sk' datatype='integer' name='[title_ratings_sk]' role='measure' type='quantitative' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.1wxi8w7099jf6g14e715w1e3gxh4].[none:primaryTitle:nk]'>
+            <groupfilter count='1000' end='top' function='end' units='records' user:ui-marker='end' user:ui-top-by-field='true'>
+              <groupfilter direction='DESC' expression='SUM([Worldwide_LifetimeGross])' function='order' user:ui-marker='order'>
+                <groupfilter from='&quot;¡Atención obras!&quot;' function='range' level='[none:primaryTitle:nk]' to='&quot;Zygote&quot;' user:ui-domain='relevant' user:ui-enumeration='inclusive' user:ui-marker='enumerate' />
+              </groupfilter>
+            </groupfilter>
+          </filter>
+          <filter class='quantitative' column='[federated.1wxi8w7099jf6g14e715w1e3gxh4].[sum:Worldwide_LifetimeGross:qk]' included-values='in-range'>
+            <min>174463257</min>
+            <max>2847379794</max>
+          </filter>
+          <shelf-sorts>
+            <shelf-sort-v2 dimension-to-sort='[federated.1wxi8w7099jf6g14e715w1e3gxh4].[none:primaryTitle:nk]' direction='DESC' is-on-innermost-dimension='true' measure-to-sort-by='[federated.1wxi8w7099jf6g14e715w1e3gxh4].[sum:Worldwide_LifetimeGross:qk]' shelf='rows' />
+          </shelf-sorts>
+          <slices>
+            <column>[federated.1wxi8w7099jf6g14e715w1e3gxh4].[sum:Worldwide_LifetimeGross:qk]</column>
+            <column>[federated.1wxi8w7099jf6g14e715w1e3gxh4].[none:primaryTitle:nk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <encoding attr='space' class='0' field='[federated.1wxi8w7099jf6g14e715w1e3gxh4].[sum:Worldwide_LifetimeGross:qk]' field-type='quantitative' max='3143816104' min='-178127148' range-type='fixed' scope='cols' type='space' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane id='1' selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <lod column='[federated.1wxi8w7099jf6g14e715w1e3gxh4].[none:Release_Year:ok]' />
+              <lod column='[federated.1wxi8w7099jf6g14e715w1e3gxh4].[sum:BoxOffice_Rank:qk]' />
+              <lod column='[federated.1wxi8w7099jf6g14e715w1e3gxh4].[sum:Domestic_LifetimeGross:qk]' />
+              <lod column='[federated.1wxi8w7099jf6g14e715w1e3gxh4].[sum:Foreign_LifetimeGross:qk]' />
+              <lod column='[federated.1wxi8w7099jf6g14e715w1e3gxh4].[sum:runtimeMinutes:qk]' />
+              <lod column='[federated.1wxi8w7099jf6g14e715w1e3gxh4].[sum:title_ratings_sk:qk]' />
+            </encodings>
+          </pane>
+        </panes>
+        <rows>[federated.1wxi8w7099jf6g14e715w1e3gxh4].[none:primaryTitle:nk]</rows>
+        <cols>[federated.1wxi8w7099jf6g14e715w1e3gxh4].[sum:Worldwide_LifetimeGross:qk]</cols>
+      </table>
+      <simple-id uuid='{063135D6-4512-4336-96F1-76B828C7A96D}' />
+    </worksheet>
+  </worksheets>
+  <windows source-height='30'>
+    <window class='worksheet' maximized='true' name='Top 1000 movies by worldwide gross'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card param='[federated.1wxi8w7099jf6g14e715w1e3gxh4].[none:primaryTitle:nk]' type='filter' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <highlight>
+          <color-one-way>
+            <field>[federated.1wxi8w7099jf6g14e715w1e3gxh4].[none:Release_Year:ok]</field>
+            <field>[federated.1wxi8w7099jf6g14e715w1e3gxh4].[none:Release_Year:qk]</field>
+            <field>[federated.1wxi8w7099jf6g14e715w1e3gxh4].[none:primaryTitle:nk]</field>
+          </color-one-way>
+        </highlight>
+      </viewpoint>
+      <simple-id uuid='{B9E799DF-F32C-4F31-9BA1-DE0CD92B51B0}' />
+    </window>
+  </windows>
+  <thumbnails>
+    <thumbnail height='192' name='Top 1000 movies by worldwide gross' width='192'>
+      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
+    </thumbnail>
+  </thumbnails>
+</workbook>
